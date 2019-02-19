@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vanilla films</title>
+    <link rel="icon" type="image/ico" href="images/logo-image.png" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+</head>
+
+<body>
+    <nav class="navbar">
+        <a class="navbar-brand navbar-style-logo" href="index.html"><img src="images/logo.png" alt=""></a>
+        <div class="mr-left">
+            <a class="navbar-brand navbar-style" href="about.html#about">About</a>
+            <a class="navbar-brand navbar-style" href="works.html">Work</a>
+            <a class="navbar-brand navbar-style" href="about.html#contact">Contact</a>
+        </div>
+    </nav>
+    <video autoplay muted loop id="myVideo">
+        <source id='main-video' src="films/debenhams.mp4" type="video/mp4">
+    </video>
+    <!-- Optional: some overlay text to describe the video -->
+    <div class="content">
+        <div id="menu-new">
+            <div class="contSize">
+                <ul class="menu">
+                    <li>
+                        <div id="alpha_mega" class="myBtn" onclick="playVideo('alpha_mega')">
+                            <img class="d-block w-100" src="images/alpha_mega_2019.jpg" class="img-fluid">
+                        </div>
+                    </li>
+                    <li>
+                        <div id="dove_uk" class="myBtn" onclick="playVideo('dove_uk')">
+                            <img class="d-block w-100" src="images/dove_uk.jpg" class="img-fluid">
+                        </div>
+                    </li>
+                    <li>
+                        <div id="lidl_teaser" class="myBtn" onclick="playVideo('lidl_teaser')">
+                            <img class="d-block w-100" src="images/lidl_teaser.jpg" class="img-fluid">
+                        </div>
+                    </li>
+                    <li>
+                        <div id="dove_japan" class="myBtn" onclick="playVideo('dove_japan')">
+                            <img class="d-block w-100" src="images/dove_japan.jpg" class="img-fluid">
+                        </div>
+                    </li>
+                    <li>
+                        <div id="christis_yoghurt" class="myBtn" onclick="playVideo('christis_yoghurt')">
+                            <img class="d-block w-100" src="images/christis_yoghurt.jpg" class="img-fluid">
+                        </div>
+                    </li>
+                    <li>
+                        <div id="debenhams" class="myBtn" onclick="playVideo('debenhams')">
+                            <img class="d-block w-100" src="images/debenhams.jpg" class="img-fluid">
+                        </div>
+                    </li>
+
+                    <li>
+                        <div id="bugs_and_heroes" class="myBtn" onclick="playVideo('bugs_and_heroes')">
+                            <img class="d-block w-100" src="images/bugs_and_heroes.jpg" class="img-fluid">
+                        </div>
+                    </li>
+                    <li>
+                            <div id="prase" class="myBtn" onclick="playVideo('prase')">
+                                <img class="d-block w-100" src="images/prase.jpg" class="img-fluid">
+                            </div>
+                        </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div onclick="test()">
+        <video class="small-video" autoplay muted loop id="smallVideo">
+            <source id='small-video' src="films/debenhams.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="mobile-screen">
+        <ul>
+            <li>
+                <img onclick="openVideo('alpha_mega')" src="images/alpha_mega_2019.jpg">
+            </li>
+            <li>
+                <img onclick="openVideo('dove_uk')" src="images/dove_uk.jpg">
+            </li>
+            <li>
+                <img onclick="openVideo('lidl_teaser')" src="images/lidl_teaser.jpg">
+            </li>
+            <li>
+                <img onclick="openVideo('dove_japan')" src="images/dove_japan.jpg">
+            </li>
+            <li>
+                <img onclick="openVideo('christis_yoghurt')" src="images/christis_yoghurt.jpg">
+            </li>
+            <li>
+                <img onclick="openVideo('debenhams')" src="images/debenhams.jpg">
+            </li>
+            <li>
+                <img onclick="openVideo('bugs_and_heroes')" src="images/bugs_and_heroes.jpg">
+            </li>
+            <li>
+                <img onclick="openVideo('prase')" src="images/prase.jpg">
+            </li>
+        </ul>
+    </div>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+    <script src="index.js"></script>
+    <script>
+        function test() {
+            document.getElementById("smallVideo").style.display = "none";
+        }
+        function openVideo(id) {
+            function playVideo(link) {
+                document.getElementById("small-video").src = link;
+                document.getElementById("smallVideo").load()
+                document.getElementById("smallVideo").style.display = "block";
+            }
+
+            switch (id) {
+                case "alpha_mega":
+                    playVideo("./films/alphal_mega_image_january_2019.mp4")
+                    break;
+                case "dove_uk":
+                    playVideo("./films/dove_uk.mp4")
+                    break;
+                case "lidl_teaser":
+                    playVideo("./films/lidl_teaser.mp4")
+                    break;
+                case "dove_japan":
+                    playVideo("./films/dove_japan.mp4")
+                    break;
+                case "christis_yoghurt":
+                    playVideo("./films/christis_yoghurt.mp4")
+                    break;
+                case "debenhams":
+                    playVideo("./films/debenhams.mp4")
+                    break;
+                case "bugs_and_heroes":
+                    playVideo("./films/bugs_and_heroes.mp4")
+                    break;
+                    case "prase":
+                    playVideo("./films/prase.mp4")
+                    break;
+            }
+
+        }
+        function closeVide() {
+            document.getElementById("smallVideo").style.display = "block";
+        }
+    </script>
+
+</body>
+
+</html>

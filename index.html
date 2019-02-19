@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vanilla films</title>
+    <link rel="icon" type="image/ico" href="images/logo-image.png" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+</head>
+
+<body>
+    <nav class="navbar">
+        <a class="navbar-brand navbar-style-logo" href="index.html"><img src="images/logo.png" alt=""></a>
+        <div class="mr-left">
+            <a class="navbar-brand navbar-style" href="about.html#about">About</a>
+            <a class="navbar-brand navbar-style" href="works.html">Work</a>
+            <a class="navbar-brand navbar-style" href="about.html#contact">Contact</a>
+        </div>
+    </nav>
+    <video autoplay muted loop id="myVideo">
+        <source id='main-video' src="films/debenhams.mp4" type="video/mp4">
+    </video>
+    <script src="index.js"></script>
+    <script>
+        if (screen.width <= 960) {
+            document.location = "works.html";
+        }
+    </script>
+
+</body>
+
+</html>

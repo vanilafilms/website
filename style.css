@@ -1,0 +1,162 @@
+/* Style the video: 100% width and height to cover the entire window */
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  max-width: 100%;
+  min-width: 100%;
+  min-height: 100%;
+}
+@media (max-width : 720px) {
+    #myVideo{
+        display: none;
+    }
+    .content {display: none;}
+    
+  }
+/* Add some content at the bottom of the video/page */
+.content {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Style the button used to pause/play the video */
+.myBtn {
+  width: 200px;
+  cursor: pointer;
+}
+
+#menu-nexr  {
+    overflow: hidden;
+}
+
+#menu-new div.contSize{
+    overflow: hidden;
+    margin: 0 auto;
+}
+.menu li {
+    padding-right:30px;
+}
+#menu-new div.contSize ul.menu {
+    list-style: none outside none;
+    width: 9000px;
+    display: block;
+    padding-left: 10px;
+}
+#menu-new div.contSize ul.menu li:first-child {
+    margin: 0;
+}
+
+#menu-new div.contSize ul.menu li {
+    float: left;
+    margin: 0 0 0 12px;
+}
+
+.navbar {
+    height: 80px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    z-index: 100;
+    transition: background-color 1s ease 0s;
+    font-weight: 600;
+    color: white;
+    background:transparent;
+  }
+  .navbar-style-logo {
+      width: 40%;
+  }
+.navbar-style-logo img {
+    width: 35%;
+
+}
+.navbar-style{
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 700;
+    line-height: 26.4px;
+    color: white;
+    margin-left: 30px;
+}
+.navbar-style:hover {
+    color: gray;
+}
+@media (max-width : 720px) {
+    .navbar-style {
+        font-size: 1.2rem;
+        margin-left: 10px;
+    }
+    .navbar-style-logo {
+        width: 80%;
+        margin: auto;
+        margin-bottom: 2%;
+        margin-top: 10%;
+
+    }
+    .navbar{
+        margin-bottom: 20%;
+
+    }
+    .mr-left {
+        margin: auto !important;
+    }
+    .navbar-style-logo img {
+        width: 100%;
+
+    }
+}
+.videoContainer {
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    object-fit: fill;
+    position: absolute;
+}
+
+.mobile-screen{
+    display: none;
+}
+@media (max-width : 720px) {
+    .mobile-screen{
+        display:block;
+    }
+
+  }
+  .mobile-screen{
+   max-width: 100ch;
+  }
+
+  .mobile-screen ul li{
+    list-style-type: none;
+}
+.mobile-screen ul {
+   padding:0;
+}
+.mobile-screen ul li img {
+    padding-bottom: 10px;
+    max-width: 100%;
+}
+.small-video {
+    width:100% !important;
+    position: fixed;
+    top: 10;
+    display: none;
+}
+
+body {
+    background-color: black;
+}
